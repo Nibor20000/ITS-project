@@ -17,20 +17,20 @@ def white_img(size):
 
 def random_color_img(size):
     img = np.random.rand(size, size, 3) * 255
-    img = Image.fromarray(img.astype('uint8')).convert('RGBA')
+    img = Image.fromarray(img.astype('uint8')).convert('RGB')
     return img
 
 
 def random_grey_img(size):
     img = np.random.rand(size, size) * 255
-    img = Image.fromarray(img.astype('uint8')).convert('RGBA')
+    img = Image.fromarray(img.astype('uint8')).convert('RGB')
     return img
 
 
 def random_repeat_img(size, block):
     img_small = np.random.rand(int(size / block), int(size / block), 3) * 255
     img = np.repeat(np.repeat(img_small, block, axis=0), block, axis=1)
-    img = Image.fromarray(img.astype('uint8')).convert('RGBA')
+    img = Image.fromarray(img.astype('uint8')).convert('RGB')
     return img
 
 

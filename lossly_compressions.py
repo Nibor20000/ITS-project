@@ -34,8 +34,6 @@ def JPEG_compress(img):  # https://pi.math.cornell.edu/~web6140/TopTenAlgorithms
     # Downsampling
     img_array[:,  2] = np.floor_divide(img_array[:,  2], 2) *2
     img_array[:,  3] = np.floor_divide(img_array[:,  3], 2) *2
-    plt.imshow(img_array)
-    plt.show()
     # DCT compression
     imsize = img_array.shape
     dct = np.zeros(imsize)

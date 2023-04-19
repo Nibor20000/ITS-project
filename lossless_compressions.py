@@ -42,7 +42,7 @@ class RLE:
     def encode(self):
 
         # return ''.join(str(s) for s in (''.join(str(s) for s in self.rle.encode(self.data))))
-        return np.asarray(self.rle.encode(self.data))
+        return bytes(''.join(np.asarray(self.rle.encode(self.data))[0]), 'utf-8')
 
     def decode(self, data):
         return ''.join(self.rle.decode(data[0], data[1]))

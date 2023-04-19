@@ -1,0 +1,8 @@
+dahuffman
+python-rle
+deflate
+arithmetic_compressor
+scipy
+
+
+# usage: pip install -r requirements.txt
